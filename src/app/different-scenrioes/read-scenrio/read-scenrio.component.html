@@ -1,0 +1,20 @@
+<app-control-buttons [name]="'Read Scenario (Medium Device)'"></app-control-buttons>
+
+<div class="divGrid mt-3">
+    <app-clock *ngIf="signals[0]"></app-clock>
+
+    <app-wave *ngIf="signals[1]" [inverts]="[200,1400]" [startHigh]="true" [name]="'FRAME#'" [color]="'#ff6c00'"></app-wave>
+
+    <app-data-waves *ngIf="signals[2]" [name]="'AD'" [inverts]="[200,400,600,1000,1000,1200,1200,1500]" [delay]="12"  ></app-data-waves>
+
+    <app-data-waves *ngIf="signals[3]" [name]="'CBE'" [inverts]="[200,400,400,800,800,1200,1200,1500]" [delay]="12" ></app-data-waves>
+    
+    <app-wave *ngIf="signals[4]" [name]="'IRDY#'" [inverts]="[400,1200,1400,1600]" [startHigh]="true" [color]="'#002366'"></app-wave>
+
+    <app-wave *ngIf="signals[5]" [name]="'TRDY#'" [inverts]="[600,800,1000,1600]" [startHigh]="true" [color]="'#3b0944'"></app-wave>
+
+    <app-wave *ngIf="signals[6]" [name]="'DEVSEL#'" [inverts]="[600,1600]" [startHigh]="true" [color]="'#86003c'"></app-wave>
+
+
+
+</div>
